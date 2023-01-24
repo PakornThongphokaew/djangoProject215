@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block centent %}
+    <div class="text-dark  p-md3 rounded mb-2">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'images/pakorn.jpg' %}" class="img-fluid rounded" alt="...">
+    </div>
+    <div class="col-md-6">
+        <h1 class="table-info" >Show Details</h1>
+        <hr class="text-dark">
+        <p class="lead m-0"><strong>Name:</strong> {{ name }}</p>
+        <p class="lead m-0"><strong>Sername:</strong> {{ sername }}</p>
+        <p class="lead m-0"><strong>Nickname:</strong> {{ nickname }}</p>
+        <p class="lead m-0"><strong>Weight:</strong> {{ weight }}</p>
+        <p class="lead m-0"><strong>Height:</strong> {{ height }}</p>
+        <p class="lead m-0"><strong>Gender:</strong> {{ gender }}</p>
+        <p class="lead m-0"><strong>Education:</strong> {{ education }}</p>
+        <p class="lead m-0"><strong>Status:</strong> {{ status }}</p>
+        <p class="lead m-0"><strong>Work:</strong> {{ work }}</p>
+        <p class="lead m-0"><strong>Old:</strong> {{ old }}</p>
+    </div>
+    <table class="table text-primary table-striped table-hover">
+    <h2 class="table-info text-center" >Show Product</h2>
+        <tr>
+            <th>ID</th>
+            <th>IMAGES</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+        </tr>
+        {% for products in product %}
+            <tr>
+                <td>{{ products.0 }}</td>
+                <td><img src="{{ products.1 }}" height="150" width="150"></td>
+                <td>{{ products.2 }}</td>
+                <td>{{ products.3 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

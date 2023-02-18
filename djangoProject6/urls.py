@@ -20,6 +20,6 @@ from djangoProject6 import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ProfileApp', include('ProfileApp.urls')),
+    path('ProfileApp/', include('ProfileApp.urls')),
     path('', view.home, name='home'),
 ]
